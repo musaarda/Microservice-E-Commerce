@@ -1,0 +1,68 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Web",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-web",
+            "program": "${workspaceFolder}/Frontend/Mango.Web/bin/Debug/net7.0/Mango.Web.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Frontend/Mango.Web",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            },
+            "logging": {
+                "browserStdOut": false,
+                "engineLogging": false,
+                "moduleLoad": false,
+            }
+        },
+        {
+            "name": "Product API",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-product-api",
+            "program": "${workspaceFolder}/Services/Mango.Services.ProductAPI/bin/Debug/net7.0/Mango.Services.ProductAPI.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Services/Mango.Services.ProductAPI",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            },
+            "logging": {
+                "browserStdOut": false,
+                "engineLogging": false,
+                "moduleLoad": false,
+            }
+        },
+    ],
+    "compounds": [
+        {
+            "name": "All Poojects",
+            "configurations": [
+                "Web",
+                "Product API"
+            ],
+            "stopAll": true
+        }
+    ]
+}
