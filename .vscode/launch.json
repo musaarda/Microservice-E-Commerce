@@ -13,10 +13,6 @@
             "args": [],
             "cwd": "${workspaceFolder}/Frontend/Mango.Web",
             "stopAtEntry": false,
-            "serverReadyAction": {
-                "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
-            },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
@@ -38,10 +34,6 @@
             "args": [],
             "cwd": "${workspaceFolder}/Services/Mango.Services.ProductAPI",
             "stopAtEntry": false,
-            "serverReadyAction": {
-                "action": "openExternally",
-                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
-            },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
